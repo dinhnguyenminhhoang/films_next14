@@ -9,5 +9,5 @@ export default function Home() {
         '/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc',
         fetcher,
     )
-    return <Container className="h-screen w-screen bg-[#000]"></Container>
+    return <Container className="h-screen w-screen"></Container>
 }
