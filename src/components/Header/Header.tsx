@@ -29,41 +29,29 @@ const Header = () => {
                     />
                 </Link>
                 <ListItemButton>
-                    <ListItemIcon className="min-w-8">
-                        <MovieIcon className="text-white" />
+                    <ListItemIcon className="flex items-center gap-2 text-primary-foreground hover:text-slate-500">
+                        <MovieIcon color="inherit" />
+                        <ListItemText primary="Movies" className="text-lg" />
                     </ListItemIcon>
-                    <ListItemText
-                        primary="Movies"
-                        className="text-lg text-white"
-                    />
-                </ListItemButton>
+                </ListItemButton>{' '}
                 <ListItemButton>
-                    <ListItemIcon className="min-w-8">
-                        <ConnectedTvIcon className="text-white" />
+                    <ListItemIcon className="flex items-center gap-2 text-primary-foreground hover:text-slate-500">
+                        <ConnectedTvIcon color="inherit" />
+                        <ListItemText primary="TV Shows" className="text-lg" />
                     </ListItemIcon>
-                    <ListItemText
-                        className="text-lg text-white"
-                        primary="Tv Shows"
-                    />
-                </ListItemButton>
+                </ListItemButton>{' '}
                 <ListItemButton>
-                    <ListItemIcon className="min-w-8">
-                        <PeopleAltIcon className="text-white" />
+                    <ListItemIcon className="flex items-center gap-2 text-primary-foreground hover:text-slate-500">
+                        <PeopleAltIcon color="inherit" />
+                        <ListItemText primary="People" className="text-lg" />
                     </ListItemIcon>
-                    <ListItemText
-                        className="text-lg text-white"
-                        primary="People"
-                    />
-                </ListItemButton>
+                </ListItemButton>{' '}
                 <ListItemButton>
-                    <ListItemIcon className="min-w-8">
-                        <MoreIcon className="text-white" />
+                    <ListItemIcon className="flex items-center gap-2 text-primary-foreground hover:text-slate-500">
+                        <MoreIcon color="inherit" />
+                        <ListItemText primary="More" className="text-lg" />
                     </ListItemIcon>
-                    <ListItemText
-                        className="text-lg text-white"
-                        primary="More"
-                    />
-                </ListItemButton>
+                </ListItemButton>{' '}
             </List>
             <List className="flex items-center gap-6">
                 <ListItemButton>
