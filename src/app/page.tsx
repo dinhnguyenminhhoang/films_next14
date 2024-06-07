@@ -1,13 +1,15 @@
-'use client'
-import { fetcher } from '@/helper'
-import Image from 'next/image'
-import { env } from 'process'
+import { Box } from '@mui/material'
 import Container from '@mui/material/Container'
-import useSWR from 'swr'
+import dynamic from 'next/dynamic'
+const Trending = dynamic(
+    () => import('@/components/ResuableSlide/ResuableSlide'),
+)
 export default function Home() {
-    const { data, error } = useSWR(
-        '/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc',
-        fetcher,
+    return (
+        <Container className="h-screen w-screen overflow-hidden">
+            <Box className="my-10 flex items-center gap-2">
+                <Trending />
+            </Box>
+        </Container>
     )
-    return <Container className="h-screen w-screen"></Container>
 }
