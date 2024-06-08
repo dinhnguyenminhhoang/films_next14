@@ -8,15 +8,14 @@ const CardCpn = ({ data }: { data: MovieType }) => {
     return (
         <Box className="] w-40 min-w-40 cursor-pointer">
             <Box className="relative">
-                <Suspense fallback={<Spinner />}>
-                    <Image
-                        src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
-                        alt=""
-                        width={160}
-                        height={225}
-                        className="h-60 w-40 rounded-md border border-border object-cover"
-                    />
-                </Suspense>
+                <Image
+                    blurDataURL="/img/default.jpg"
+                    src={`https://image.tmdb.org/t/p/w500${data.backdrop_path}`}
+                    alt=""
+                    width={160}
+                    height={225}
+                    className="h-60 w-40 rounded-md border border-border object-cover"
+                />
                 <Box className="absolute -bottom-3 left-2 flex h-10 w-10 items-center justify-center rounded-full bg-black">
                     <Typography
                         variant="h6"

@@ -5,6 +5,8 @@ import './globals.css'
 import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
 import ClientComponent from '@/components/Client/ClientCpn'
+import { Suspense } from 'react'
+import Spinner from '@/components/Spinner/Spinner'
 
 const fontSans = FontSans({
     subsets: ['latin'],
@@ -28,9 +30,13 @@ export default function RootLayout({
                     fontSans.variable,
                 )}
             >
-                <Header />
+                <Suspense fallback={<Spinner />}>
+                    <Header />
+                </Suspense>
                 {children}
-                <Footer />
+                <Suspense fallback={<Spinner />}>
+                    <Footer />
+                </Suspense>
             </body>
         </html>
     )
