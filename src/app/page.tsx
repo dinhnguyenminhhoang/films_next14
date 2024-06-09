@@ -1,4 +1,5 @@
 'use client'
+import MovieList from '@/components/MovieList/MovieList'
 import Spinner from '@/components/Spinner/Spinner'
 import { fetcher } from '@/helper'
 import { Box } from '@mui/material'
@@ -59,6 +60,7 @@ export default function Home() {
                         option={OPTIONS[1]}
                     />
                 </Suspense>
+                <MovieList />
             </Box>
         </Container>
     )

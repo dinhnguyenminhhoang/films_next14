@@ -18,13 +18,13 @@ const Slideshow = ({ data, SlideItem }: SlideshowProps) => {
         dots: false,
         infinite: true,
         speed: 200,
-        slidesToShow: 8,
+        slidesToShow: 6,
         slidesToScroll: 1,
         autoplay: true,
     }
 
     return (
-        <Box className="mt-4 sm:w-[1000px] md:w-[1400px]">
+        <Box className="mt-4">
             <Slider {...settings}>
                 {data?.map((item: MovieType) => (
                     <SlideItem data={item} key={item.id} />
